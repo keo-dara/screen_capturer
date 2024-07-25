@@ -33,8 +33,9 @@ class _ScreenCapture extends Command with SystemScreenCapturer {
         ..._knownCaptureModeArgs[mode]!,
         ...(copyToClipboard ? ['-c'] : []),
         ...(silent ? ['-x'] : []),
+        ...['-D'],
+        ...[display.toString()],
         ...(imagePath != null ? [imagePath] : []),
-        ...(display != 1 ? ['-D', display.toString()] : []),
       ],
     );
   }

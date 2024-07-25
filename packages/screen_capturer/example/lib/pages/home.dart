@@ -44,11 +44,11 @@ class _HomePageState extends State<HomePage> {
     String imagePath =
         '${directory.path}/screen_capturer_example/Screenshots/$imageName';
     _lastCapturedData = await screenCapturer.capture(
-      mode: mode,
-      imagePath: imagePath,
-      copyToClipboard: _copyToClipboard,
-      silent: true,
-    );
+        mode: mode,
+        imagePath: imagePath,
+        copyToClipboard: _copyToClipboard,
+        silent: true,
+        display: 1);
     if (_lastCapturedData != null) {
       // ignore: avoid_print
       // print(_lastCapturedData!.toJson());
