@@ -72,6 +72,7 @@ class _MsScreenclip with SystemScreenCapturer {
     String? imagePath,
     bool copyToClipboard = true,
     bool silent = true,
+    int display = 1,
   }) async {
     String url = 'ms-screenclip://?';
     if (mode == CaptureMode.screen) {
